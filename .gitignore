@@ -30,10 +30,11 @@ node_modules
 npm-debug.log
 
 pyLoader/secrets.py
-pyLoader/login.*
+config.js
+
 *~
 \#*\#
 mysql.js
 pyLoader/login.*
-*~
+
 
