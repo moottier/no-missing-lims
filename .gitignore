@@ -1,5 +1,5 @@
 # Logs
-logs
+0;136;0clogs
 *.log
 
 # Runtime data
@@ -29,7 +29,13 @@ node_modules
 # Debug log from npm
 npm-debug.log
 
+<<<<<<< HEAD
 pyLoader/secrets.py
 pyLoader/login.*
 *~
 \#*\#
+mysql.js
+=======
+pyLoader/login.*
+*~
+>>>>>>> fa5f280a21f08ecfa33b277b10cb1c30e9ea1193
