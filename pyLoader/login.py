@@ -1,10 +1,11 @@
 import mysql.connector
+import password from secrets
 
 def sqlexec(query = None, data = None):
     res = None
     
     try:
-        cnx = mysql.connector.connect(user='pi', password='y5j4ss', database='cc')
+        cnx = mysql.connector.connect(user='pi', password=password, database='cc')
         err = None
     except mysql.connector.Error as err:
         if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
