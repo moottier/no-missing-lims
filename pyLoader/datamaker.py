@@ -73,7 +73,7 @@ def makeSample():
                        'RS' : ['RS'],
                        'ML' : ['Malic', 'Lactic'],
                        'Metals' : ['Copper', 'Iron', 'Lead', 'Arsenic'],
-                       'TCA' : ['4EP/4EG'],
+                      'TCA' : ['4EP/4EG'],
                        'Sulfides' : ['Sulfides'],
                        'Weightfactor' : ['Specific Gravity'],
                        'Low Ethanol' : ['Low Ethanol'] }
