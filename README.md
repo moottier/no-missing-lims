@@ -13,4 +13,5 @@ This project currently lacks security, well thought out error handling, and a wa
 My next steps are:
 1. to flesh out a layout
 2. to implement python modules that will make my model dynamic. i.e. mimic the in/out flow of the database, rather than leaving it static like it is now
-3. research security layers: sql sanitization/sever-side checks, setting sql permissions, 
+3. research security layers: sql sanitization/sever-side checks, setting sql permissions, setting up the server for https
+4. research putting node server behind nginx server for added stability, speed, security
