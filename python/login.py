@@ -1,5 +1,5 @@
 import mysql.connector
-import password from secrets
+from secrets import password
 
 def sqlexec(query = None, data = None):
     res = None

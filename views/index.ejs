@@ -13,11 +13,63 @@
   </script>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='stylesheets/style.css' />
   </head>
   <body>
-    <p><%= dailyData %></p>
-    <p><%= bottlingLength %></p>
-    <p><%= outsideLength %></p>
+    <div id='upperBlock'>
+      <div id='dailies'>
+	<p id='dailyListTitle' class='listTitle'># of Incomplete Daily Tests</p>
+	<ul id='dailyCountList' class='ulPlaceholder'>
+	  <% for (const [key, value] of Object.entries(dailyData)) { %>
+	  <li><%= `${key}: ${value.length}` %></li>
+	  <% }; %>
+	</ul>
+      </div>
+      <div id='bottling'>
+	<p>Out of Spec Bottling Samples</p>
+	<table id='oosBottlingTable' class='tablePlaceholder'>
+	  <thead>
+	    <tr>
+	      <th>LIMS #</th>
+	      <th>Sample Type</th>
+	      <th>Test</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <% bottlingData.forEach(function(sample) { %>
+	    <tr>
+	      <td><%= sample['SAMPLE_NUMBER'] %></td>
+	      <td><%= sample['SAMPLE_NAME'] %></td>
+	      <td><%= sample['ENTRY'] %></td>
+	    </tr>
+	    <% }); %>
+	  </tbody>
+	</table>
+      </div>
+    </div>
+    <div id='outsides' id='outsidesListTitle' class='listTitle'>
+      <p>Remaining Outside Tests</p>
+      <table id='outsidesTable' class='tablePlaceholder'>
+	<thead>
+	  <tr>
+	    <% for (const [test] of Object.entries(outsideData)) { %>
+	    <th><%= `${test}` %></td>
+            <% }; %>
+          </tr>
+	</thead>
+	<tbody>
+	  <tr>
+	      <% for (const [test, sampleData] of Object.entries(outsideData)) { %>
+	      <td>
+		<% for (var i = 0; i < outsideData[test].length; i++) {
+		     var sampleStr = "<pre>" + outsideData[test][i]['SAMPLE_NUMBER'] + " " + outsideData[test][i]['SAMPLE_NAME'] + "\n</pre>" %>
+		  <%- `${sampleStr}` %>
+		<% }; %>  
+	      </td>
+	      <% }; %>
+	  </tr>
+	</tbody>
+      </table>
+    </div>
   </body>
 </html>

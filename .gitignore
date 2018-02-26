@@ -35,6 +35,8 @@ config.js
 *~
 \#*\#
 mysql.js
-pyLoader/login.*
 
-
+*.less
+*.pyc
+*.BAK
+*.bak
