@@ -11,7 +11,7 @@ On the Labware-LIMS website, I found a table containing describing a default or 
 This project currently lacks security, well thought out error handling, and a way for modeling an active state. The rendered page is currently barebones as well and currently only acts as a proof of concept for the site.
 
 My next steps are:
-1. to flesh out a layout
-2. to implement python modules that will make my model dynamic. i.e. mimic the in/out flow of the database, rather than leaving it static like it is now
+1. make the layout prettier, maybe talk w/ Jenni or others re: what is needed/wanted and how they want to show it
+2. write a python script to simulate the i/o nature of the LIMS database. the model is static currently
 3. research security layers: sql sanitization/sever-side checks, setting sql permissions, setting up the server for https
 4. research putting node server behind nginx server for added stability, speed, security
